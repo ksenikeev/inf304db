@@ -33,6 +33,7 @@ public class IncomeService implements IIncomeService {
 
     }
 
+    /** Тюшин */
     public void addIncome(String date, Float sum, int spendingCode, String description) {
 
     }

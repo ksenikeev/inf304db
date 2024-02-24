@@ -1,7 +1,11 @@
 package ru.itis304.db.ui;
 
+import org.w3c.dom.ls.LSOutput;
 import ru.itis304.db.service.IIncomeService;
 import ru.itis304.db.service.ISpendingService;
+
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class MainMenu {
@@ -32,7 +36,12 @@ public class MainMenu {
         }
     }
 
-    private void showAllIncome() {}
+    private void showAllIncome() {
+        System.out.println("all income = " + incomeService.getAll());
+//        for (int i = 0; i < incomeService.getAll().size(); i++) {
+//            System.out.println(incomeService.getAll().toArray()[i]);
+//        }
+    }
     private void shawAllSpending() {}
     private void showAllIncomePeriod() {}
     private void shawAllSpendingPeriod() {}

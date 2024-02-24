@@ -2,10 +2,7 @@ package ru.itis304.db.service;
 
 import ru.itis304.db.model.Income;
 import ru.itis304.db.model.IncomeData;
-import ru.itis304.db.model.Spending;
-import ru.itis304.db.model.SpendingData;
 import ru.itis304.db.repository.IncomeRepository;
-import ru.itis304.db.repository.SpendingRepository;
 
 import java.util.List;
 

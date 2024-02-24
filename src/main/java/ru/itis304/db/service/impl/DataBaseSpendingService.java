@@ -1,6 +1,5 @@
 package ru.itis304.db.service.impl;
 
-import ru.itis304.db.model.Spending;
 import ru.itis304.db.model.SpendingData;
 import ru.itis304.db.repository.SpendingRepository;
 import ru.itis304.db.service.SpendingService;
@@ -20,21 +19,24 @@ public class DataBaseSpendingService implements SpendingService {
 
     @Override
     public void save(SpendingData spendingData) {
-        repository.save(new Spending());
+        repository.save(spendingData);
     }
 
     @Override
-    public List<SpendingData> getAll() {
-        return null;
+    public List<SpendingData> findAll() {
+        return repository.findAll();
     }
 
     @Override
-    public List<SpendingData> getAllByPeriod(String dateFrom, String dateTo) {
-        return null;
+    public List<SpendingData> findByPeriod(String dateFrom, String dateTo) {
+        return repository.findByPeriod(dateFrom, dateTo);
     }
 
     @Override
     public Float getSumByPeriod(String dateFrom, String dateTo) {
-        return null;
+        return findByPeriod(dateFrom, dateTo).stream()
+                .map(SpendingData::getSum)
+                .reduce(Float::sum)
+                .orElse(0f);
     }
 }

@@ -14,6 +14,11 @@ public class SpendingService implements ISpendingService {
     public SpendingService() {
     }
 
+    @Override
+    public Spending getSpending() {
+        return null;
+    }
+
     /** через репозиторий загружаем все расходы */
     public void loadSpending() {
 

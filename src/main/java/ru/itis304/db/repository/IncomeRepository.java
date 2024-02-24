@@ -7,8 +7,10 @@ import ru.itis304.db.model.Income;
  */
 public interface IncomeRepository {
 
+    /** Бикмухаметов */
     Income getAll();
 
+    /** Салижанов */
     void save(Income income);
 
 }

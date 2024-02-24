@@ -18,6 +18,11 @@ public class IncomeService implements IIncomeService {
     public IncomeService() {
     }
 
+    @Override
+    public Income getIncome() {
+        return null;
+    }
+
     /** через репозиторий загружаем все расходы */
     public void loadIncome() {
 
@@ -28,6 +33,7 @@ public class IncomeService implements IIncomeService {
 
     }
 
+    /** Тюшин */
     public void addIncome(String date, Float sum, int spendingCode, String description) {
 
     }

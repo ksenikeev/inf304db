@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import ru.itis304.db.repository.IncomeRepository;
+import ru.itis304.db.repository.IncomeRepositoryBody;
 
 public class TestSave {
     public static void main(String[] args) throws ParseException, IOException {
@@ -31,7 +33,7 @@ public class TestSave {
 
         income.setIncome(incomeDataList);
 
-        ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.writeValue(new File("income.json"), income);
+        IncomeRepository ir = new IncomeRepositoryBody();
+        ir.save(income);
     }
 }

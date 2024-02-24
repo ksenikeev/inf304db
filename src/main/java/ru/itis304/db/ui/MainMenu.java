@@ -16,6 +16,7 @@ public class MainMenu {
         start();
     }
 
+    /** Безин */
     private void start() {
         /**
          * принимаем команды:
@@ -32,14 +33,23 @@ public class MainMenu {
         }
     }
 
+    /** Сагадиева */
     private void showAllIncome() {}
+    /** Кононенко */
     private void shawAllSpending() {}
+    /** Петунин */
     private void showAllIncomePeriod() {}
+    /** Закиров */
     private void shawAllSpendingPeriod() {}
+    /** Арманов */
     private void addIncomeData() {}
+    /** Ахметов */
     private void addSpendingData() {}
+    /** Хайруллов */
     private void showBalance() {}
+    /** Кадырова */
     private void showIncomeSum() {}
+    /** Сабирзянов */
     private void showSpendingSum() {}
 
 }

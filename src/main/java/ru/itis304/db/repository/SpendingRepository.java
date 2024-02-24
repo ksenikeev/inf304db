@@ -7,8 +7,10 @@ import ru.itis304.db.model.Spending;
  */
 public interface SpendingRepository {
 
+    /** Кириллин */
     Spending getAll();
 
+    /** Иванов */
     void save(Spending income);
 
 }

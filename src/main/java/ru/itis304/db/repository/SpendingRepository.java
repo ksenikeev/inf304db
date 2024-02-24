@@ -10,8 +10,10 @@ import java.util.List;
 public interface SpendingRepository {
 
     /** Кириллин */
-    List<SpendingData> getAll();
+    List<SpendingData> findAll();
 
     /** Иванов */
     void save(SpendingData spendingData);
+
+    List<SpendingData> findByPeriod(String dateFrom, String dateTo);
 }

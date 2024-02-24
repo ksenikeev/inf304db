@@ -12,6 +12,15 @@ public class SpendingData {
     private SpendingType category;
     private String description;
 
+    public SpendingData() {}
+
+    public SpendingData(Date date, Float sum, SpendingType category, String description) {
+        this.date = date;
+        this.sum = sum;
+        this.category = category;
+        this.description = description;
+    }
+
     public Date getDate() {
         return date;
     }

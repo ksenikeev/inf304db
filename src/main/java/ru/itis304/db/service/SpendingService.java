@@ -8,9 +8,9 @@ public interface SpendingService {
 
     void save(SpendingData spendingData);
 
-    List<SpendingData> getAll();
+    List<SpendingData> findAll();
 
-    List<SpendingData> getAllByPeriod(String dateFrom, String dateTo);
+    List<SpendingData> findByPeriod(String dateFrom, String dateTo);
 
     Float getSumByPeriod(String dateFrom, String dateTo);
 }

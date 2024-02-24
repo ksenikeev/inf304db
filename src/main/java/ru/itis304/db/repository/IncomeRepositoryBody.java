@@ -2,13 +2,10 @@ package ru.itis304.db.repository;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ru.itis304.db.model.Income;
-import ru.itis304.db.model.IncomeData;
-import ru.itis304.db.service.IncomeService;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class IncomeRepositoryBody implements IncomeRepository {
     ObjectMapper objectMapper = new ObjectMapper();

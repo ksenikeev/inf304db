@@ -5,6 +5,7 @@ import ru.itis304.db.model.SpendingData;
 import ru.itis304.db.repository.SpendingRepository;
 import java.util.List;
 
+/** Пацера */
 public class SpendingService implements ISpendingService {
 
     private SpendingRepository repository;

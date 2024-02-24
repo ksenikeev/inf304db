@@ -1,7 +1,12 @@
 package ru.itis304.db.ui;
 
+import ru.itis304.db.model.Income;
+import ru.itis304.db.model.IncomeData;
+import ru.itis304.db.model.SpendingData;
 import ru.itis304.db.service.IIncomeService;
 import ru.itis304.db.service.ISpendingService;
+
+import java.util.List;
 import java.util.Scanner;
 
 public class MainMenu {
@@ -16,7 +21,6 @@ public class MainMenu {
         start();
     }
 
-    /** Безин */
     private void start() {
         /**
          * принимаем команды:
@@ -33,23 +37,32 @@ public class MainMenu {
         }
     }
 
-    /** Сагадиева */
     private void showAllIncome() {}
-    /** Кононенко */
     private void shawAllSpending() {}
-    /** Петунин */
     private void showAllIncomePeriod() {}
-    /** Закиров */
     private void shawAllSpendingPeriod() {}
-    /** Арманов */
     private void addIncomeData() {}
-    /** Ахметов */
     private void addSpendingData() {}
-    /** Хайруллов */
-    private void showBalance() {}
-    /** Кадырова */
+    private void showBalance() {
+        float allIncome = 0;
+        float allSpending = 0;
+        List<IncomeData> listIn =  incomeService.getIncome().getIncome();
+        for (IncomeData incomeData: listIn){
+            allIncome += incomeData.getSum();
+        }
+        List<SpendingData> listSp =  spendingService.getSpending().getSpending();
+        for (SpendingData spendingData: listSp){
+            allIncome += spendingData.getSum();
+        }
+        System.out.println("Ваш баланс: " + (allIncome - allSpending));
+
+
+    }
+    public static void main(String[] args) {
+
+
+    }
     private void showIncomeSum() {}
-    /** Сабирзянов */
     private void showSpendingSum() {}
 
 }

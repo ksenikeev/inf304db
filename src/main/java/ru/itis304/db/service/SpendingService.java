@@ -5,32 +5,7 @@ import ru.itis304.db.model.SpendingData;
 import ru.itis304.db.repository.SpendingRepository;
 import java.util.List;
 
-/**
- * @author Denys Patsera
- */
-public class SpendingService implements ISpendingService {
-
-    private SpendingRepository repository;
-    private static Spending spending;
-
-    /** инициализация репозитория */
-    public SpendingService() {
-    }
-
-    @Override
-    public Spending getSpending() {
-        return null;
-    }
-
-    /** через репозиторий загружаем все расходы */
-    public void loadSpending() {
-
-    }
-
-    /** через репозиторий сохраняем все расходы */
-    public void save() {
-
-    }
+public interface SpendingService {
 
     public void addSpending(String date, Float sum, int spendingCode, String description) {
 

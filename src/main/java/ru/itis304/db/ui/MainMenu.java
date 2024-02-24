@@ -1,14 +1,14 @@
 package ru.itis304.db.ui;
 
 import ru.itis304.db.service.IIncomeService;
-import ru.itis304.db.service.ISpendingService;
+import ru.itis304.db.service.SpendingService;
 import java.util.Scanner;
 
 public class MainMenu {
 
     private Scanner scanner;
     private IIncomeService incomeService;
-    private ISpendingService spendingService;
+    private SpendingService spendingService;
 
     public MainMenu() {
         scanner = new Scanner(System.in);

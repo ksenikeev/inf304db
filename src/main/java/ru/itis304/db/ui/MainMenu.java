@@ -2,6 +2,10 @@ package ru.itis304.db.ui;
 
 import ru.itis304.db.service.IIncomeService;
 import ru.itis304.db.service.ISpendingService;
+import ru.itis304.db.service.SpendingService;
+
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class MainMenu {
@@ -33,7 +37,18 @@ public class MainMenu {
     }
 
     private void showAllIncome() {}
-    private void shawAllSpending() {}
+    private void shawAllSpending() {//мой
+
+//        System.out.println(Arrays.toString(spendingService.getAll().toArray()));//1
+//        System.out.println(spendingService.getAll());//2
+
+        for (int i = 0; i < spendingService.getAll().size(); i++) {//3
+            System.out.println(String.valueOf(i+1) + spendingService.getAll().toArray()[i]);
+
+        }
+
+
+    } //мое
     private void showAllIncomePeriod() {}
     private void shawAllSpendingPeriod() {}
     private void addIncomeData() {}

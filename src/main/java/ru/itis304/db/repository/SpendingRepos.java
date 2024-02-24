@@ -17,29 +17,33 @@ public class SpendingRepos implements SpendingRepository {
     }
 
     @Override
-    public void save(Spending income) throws IOException {
+    public void save(Spending income) {
         JsonFactory jsonFactory = new JsonFactory();
-        JsonGenerator jGenerator = jsonFactory.createGenerator(new File("spending.json"), JsonEncoding.UTF8);
+        JsonGenerator jGenerator = null;
+        try {
+            jGenerator = jsonFactory.createGenerator(new File("spending.json"), JsonEncoding.UTF8);
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-
-        jGenerator.writeStartObject();
-
-        jGenerator.writeFieldName("spending");
-        jGenerator.writeStartArray();
-
-        for (int i = 0; i < income.getSpending().size(); i++) {
             jGenerator.writeStartObject();
-            jGenerator.writeStringField("date", simpleDateFormat.format(income.getSpending().get(i).getDate()));
-            jGenerator.writeNumberField("sum", income.getSpending().get(i).getSum());
-            jGenerator.writeStringField("category", income.getSpending().get(i).getCategory().toString());
-            jGenerator.writeStringField("description", income.getSpending().get(i).getDescription());
-            jGenerator.writeEndObject();
-            //jGenerator.writeObject(income.getSpending().get(i));
-        }
-        jGenerator.writeEndArray();
 
-        jGenerator.writeEndObject();
-        jGenerator.close();
+            jGenerator.writeFieldName("spending");
+            jGenerator.writeStartArray();
+
+            for (int i = 0; i < income.getSpending().size(); i++) {
+                jGenerator.writeStartObject();
+                jGenerator.writeStringField("date", simpleDateFormat.format(income.getSpending().get(i).getDate()));
+                jGenerator.writeNumberField("sum", income.getSpending().get(i).getSum());
+                jGenerator.writeStringField("category", income.getSpending().get(i).getCategory().toString());
+                jGenerator.writeStringField("description", income.getSpending().get(i).getDescription());
+                jGenerator.writeEndObject();
+                //jGenerator.writeObject(income.getSpending().get(i));
+            }
+            jGenerator.writeEndArray();
+
+            jGenerator.writeEndObject();
+            jGenerator.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

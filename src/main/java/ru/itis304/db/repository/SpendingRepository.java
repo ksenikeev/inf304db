@@ -11,6 +11,6 @@ public interface SpendingRepository {
 
     Spending getAll();
 
-    void save(Spending income) throws IOException;
+    void save(Spending income);
 
 }

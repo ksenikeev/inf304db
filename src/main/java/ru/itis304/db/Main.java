@@ -13,7 +13,6 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        TestSaveSpending testSaveSpending = new TestSaveSpending();
-        testSaveSpending.test();
+
     }
 }

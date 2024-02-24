@@ -1,6 +1,8 @@
 package ru.itis304.db.repository;
 
-import ru.itis304.db.model.Spending;
+import ru.itis304.db.model.SpendingData;
+
+import java.util.List;
 
 /**
  * Методы загружают и сохраняют данные в файл
@@ -8,9 +10,8 @@ import ru.itis304.db.model.Spending;
 public interface SpendingRepository {
 
     /** Кириллин */
-    Spending getAll();
+    List<SpendingData> getAll();
 
     /** Иванов */
-    void save(Spending income);
-
+    void save(SpendingData spendingData);
 }

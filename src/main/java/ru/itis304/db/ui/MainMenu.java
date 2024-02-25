@@ -34,18 +34,15 @@ public class MainMenu {
 
     /** Сагадиева */
     private void showAllIncome() {}
-    private void shawAllSpending() {//мой
-
+    private void shawAllSpending() {
 //        System.out.println(Arrays.toString(spendingService.getAll().toArray()));//1
 //        System.out.println(spendingService.getAll());//2
 
-        for (int i = 0; i < spendingService.getAll().size(); i++) {//3
-            System.out.println(String.valueOf(i+1) + spendingService.getAll().toArray()[i]);
+        for (int i = 0; i < spendingService.findAll().size(); i++) {//3
+            System.out.println(String.valueOf(i+1) + spendingService.findAll().toArray()[i]);
 
         }
-
-
-    } //мое
+    }
     /** Петунин */
     private void showAllIncomePeriod() {}
     /** Закиров */

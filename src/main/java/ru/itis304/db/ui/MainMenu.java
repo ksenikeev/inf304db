@@ -40,7 +40,6 @@ public class MainMenu {
 
         for (int i = 0; i < spendingService.findAll().size(); i++) {//3
             System.out.println(String.valueOf(i+1) + spendingService.findAll().toArray()[i]);
-
         }
     }
     /** Петунин */

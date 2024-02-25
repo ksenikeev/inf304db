@@ -12,4 +12,13 @@ public class Income {
     public void setIncome(List<IncomeData> income) {
         this.income = income;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for(IncomeData data : income) {
+            sb.append(data.toString());
+        }
+        return sb.toString();
+    }
 }

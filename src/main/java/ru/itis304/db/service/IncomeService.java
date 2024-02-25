@@ -2,10 +2,7 @@ package ru.itis304.db.service;
 
 import ru.itis304.db.model.Income;
 import ru.itis304.db.model.IncomeData;
-import ru.itis304.db.model.Spending;
-import ru.itis304.db.model.SpendingData;
 import ru.itis304.db.repository.IncomeRepository;
-import ru.itis304.db.repository.SpendingRepository;
 
 import java.util.List;
 
@@ -18,6 +15,11 @@ public class IncomeService implements IIncomeService {
     public IncomeService() {
     }
 
+    @Override
+    public Income getIncome() {
+        return null;
+    }
+
     /** через репозиторий загружаем все расходы */
     public void loadIncome() {
 
@@ -28,6 +30,7 @@ public class IncomeService implements IIncomeService {
 
     }
 
+    /** Тюшин */
     public void addIncome(String date, Float sum, int spendingCode, String description) {
 
     }

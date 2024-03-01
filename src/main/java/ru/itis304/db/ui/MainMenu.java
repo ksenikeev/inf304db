@@ -48,7 +48,11 @@ public class MainMenu {
     /** Хайруллов */
     private void showBalance() {}
     /** Кадырова */
-    private void showIncomeSum() {}
+    private void showIncomeSum(String dateFrom, String dateTo) {
+        for (int i = 0; i < incomeService.getAll().size(); i++) {
+            System.out.println("income sum = " + incomeService.getSumByPeriod(dateFrom, dateTo));
+        }
+    }
     /** Сабирзянов */
     private void showSpendingSum() {}
 

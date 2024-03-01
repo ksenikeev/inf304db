@@ -15,22 +15,18 @@ public class IncomeService implements IIncomeService {
     public IncomeService() {
     }
 
-    @Override
-    public Income getIncome() {
-        return null;
-    }
-
-    /** через репозиторий загружаем все расходы */
+    /** через репозиторий загружаем все доходы */
     public void loadIncome() {
 
     }
 
-    /** через репозиторий сохраняем все расходы */
-    public void save() {
+
+
+    /** через репозиторий сохраняем все доходы */
+    public void save(IncomeData incomeData) {
 
     }
 
-    /** Тюшин */
     public void addIncome(String date, Float sum, int spendingCode, String description) {
 
     }

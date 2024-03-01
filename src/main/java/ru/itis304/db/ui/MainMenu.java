@@ -1,7 +1,9 @@
 package ru.itis304.db.ui;
 
+import ru.itis304.db.json.TestSave;
 import ru.itis304.db.service.IIncomeService;
 import ru.itis304.db.service.SpendingService;
+import ru.itis304.db.json.TestSave.*;
 import java.util.Scanner;
 
 public class MainMenu {
@@ -50,6 +52,12 @@ public class MainMenu {
     /** Кадырова */
     private void showIncomeSum() {}
     /** Сабирзянов */
-    private void showSpendingSum() {}
+    private double showSpendingSum() {
+        double res = 0;
+        for (int i = 0; i < TestSave.spendsList.size(); ++i) {
+            res += TestSave.spendsList.get(i).getSum();
+        }
+        return res;
+    }
 
 }

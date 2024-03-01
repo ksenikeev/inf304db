@@ -12,8 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import ru.itis304.db.model.SpendingData;
 
 public class TestSave {
+    public static ArrayList<SpendingData> spendsList = new ArrayList<SpendingData>();
     public static void main(String[] args) throws ParseException, IOException {
         Income income = new Income();
 

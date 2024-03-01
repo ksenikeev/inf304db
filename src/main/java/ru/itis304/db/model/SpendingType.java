@@ -5,5 +5,5 @@ public enum SpendingType {
     Transport,
     Service,
     Education,
-    Entertainmence
+    Entertainment
 }

@@ -1,16 +1,19 @@
 package ru.itis304.db.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 import java.util.Date;
 
 public class IncomeData {
-    @JsonFormat
-            (shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm")
     private Date date;
     private Float sum;
     private IncomeType category;
     private String description;
+
+    public IncomeData(Date date, Float sum, IncomeType category, String description) {
+        this.date = date;
+        this.sum = sum;
+        this.category = category;
+        this.description = description;
+    }
 
     public Date getDate() {
         return date;
@@ -43,7 +46,6 @@ public class IncomeData {
     public void setDescription(String description) {
         this.description = description;
     }
-
     @Override
     public String toString() {
         return "IncomeData{" +

@@ -4,6 +4,8 @@ import ru.itis304.db.model.SpendingData;
 
 import java.util.List;
 
+import java.io.IOException;
+
 /**
  * Методы загружают и сохраняют данные в файл
  */

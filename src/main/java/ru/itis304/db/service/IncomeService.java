@@ -2,8 +2,11 @@ package ru.itis304.db.service;
 
 import ru.itis304.db.model.Income;
 import ru.itis304.db.model.IncomeData;
+import ru.itis304.db.model.IncomeType;
 import ru.itis304.db.repository.IncomeRepository;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class IncomeService implements IIncomeService {
@@ -31,8 +34,13 @@ public class IncomeService implements IIncomeService {
     }
 
     /** Тюшин */
-    public void addIncome(String date, Float sum, int spendingCode, String description) {
+    public void addIncome(IncomeData incomeData, String date, Float sum, IncomeType incomeType, String description) throws ParseException {
+        incomeData.setDate(new SimpleDateFormat("yyyy-MM-dd HH:mm").parse(date));
+        incomeData.setSum(sum);
+        incomeData.setCategory(incomeType);
+        incomeData.setDescription(description);
 
+        getAll().add(incomeData);
     }
 
     public List<IncomeData> getAll() {
